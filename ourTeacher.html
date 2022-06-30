@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- <script type="module" src="./axios.js"></script> -->
+    <script type="text/javascript">
+        var apiUrl = 'https://62b9d24aff109cd1dc9bec86.mockapi.io/users';
+        fetch(apiUrl).then(response => {
+          return response.json();
+        }).then(data => {
+          console.log(data);
+          w3.displayObject("id01", data[0]);
+        }).catch(err => {
+
+        });
+    </script>
+    <div id="id01">
+        {{id}} {{taiKhoan}} {{hoTen}} {{matKhau}}
+    </div>
+</body>
+</html>
